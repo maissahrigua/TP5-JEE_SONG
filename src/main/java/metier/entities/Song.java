@@ -1,8 +1,24 @@
 package metier.entities;
+
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "SONG")
 public class Song implements Serializable{
+	@Id
+	@Column (name="CODE")
 	private Long idSong;
+	
+	@Column (name="NAMESONG")
 	private String nameSong;
+	
+	@Column (name="NAMESINGER")
 	private String nameSinger;
 	
 	public Song() {
